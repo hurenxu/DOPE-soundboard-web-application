@@ -1,0 +1,16 @@
+<!-- Navigation Bar area -->
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-dark">
+    <div class="container">
+        <a href="/mp/0"><h3 class="navbar-brand supreme_font">SoundBoard Ninja&trade;</h3></a>
+        <div class="navbar-right">
+            <div id="sign_area" >
+                <form class="form-inline my-2 my-lg-0" action="/logout.php" method="post" style="margin-left: 10px">
+                    <button class="btn btn-primary" type="submit">Log Out</button>
+                </form>
+                <form class="form-inline my-2 my-lg-0" action="/cg/0" method="post" style="margin-left: 10px">
+                    <button id="enterPersonalPage" type="submit" class="btn btn-success"><?= $loginId ?>'s Page</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>

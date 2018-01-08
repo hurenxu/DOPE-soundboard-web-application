@@ -1,0 +1,20 @@
+<div id="sound_div_<?= $index + 1 ?>" class="col-sm-4 col-md-4 col-lg-4">
+    <div id="exmapleCover_<?= $index + 1 ?>" class = "thumbnail">
+        <div class="sound-contain">
+            <img class="album_img" id="example_img_<?= $index + 1 ?>" src="/<?= $imgPath ?>" alt="exmaple public albums">
+            <button type="button" class="mbtn"><img class="play" src="/img/play.svg"></button>
+        </div>
+        <!-- <a class="link" href=" ">< img id="cover_img_1" src="./img/play.svg" alt="enter img" ></a > -->
+        <audio class="mSound" id="audio<?= $index + 1 ?>" src="/<?= $soundPath ?>"></audio>
+
+        <div class="caption">
+            <div class="sound-name">
+                <h2 id="soundName_<?= $index + 1 ?>"><img class="author-pic" src="/img/album.svg" alt="exmaple public albums"><?= $soundName ?></h2>
+            </div>
+            <?php if ($isOwner): ?>
+                <a><button url="<?= $modifyUrl ?>" type="button" class="btn btn-priry soundModifyBtn">Modify</button></a>
+                <a><button url="<?= $deleteUrl ?>" type="button" class="btn btn-priry deleteBtn">Delete</button></a>
+            <?php endif ?>
+        </div>
+    </div>
+</div>

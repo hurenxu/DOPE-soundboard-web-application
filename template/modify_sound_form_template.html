@@ -1,0 +1,22 @@
+<div class="container mt-5" style="margin-top: 7rem">
+    <form style="margin: 0 35%" enctype="multipart/form-data" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
+        <div class="form-group">
+            <label>Sound name
+                <input type="text" name="soundName" required placeholder="Enter sound name" value="<?= $soundName?>">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Choose a new sound if you want to change it
+                <input type="file" name="upload[]" accept=".wav, .mp3">
+                <p><?= $soundPath?></p>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Choose a new image if you want to change it
+                <input type="file" name="upload[]" accept=".png, .jpeg">
+                <?= $imagePath ?>
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

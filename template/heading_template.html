@@ -1,0 +1,75 @@
+<?php if (isset($headingType)): ?>
+<!-- heading area -->
+    <section id="heading-section" class="jumbotron text-center">
+        <div class="container">
+        <h4 id="heading-title" class="jumbotron-heading supreme_font"><?= $title ?></h4>
+        </div>
+    </section>
+
+<!-- Board Update Area-->
+    <div class="well-lg container flex-container">
+        <?php if ($headingType == 'board'): ?>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <strong>View Group:
+                <a href="/cg/0">Public</a>
+                <a href="/eg/0">Private</a>
+            </strong>
+        </div>
+        <?php endif ?>
+
+        <?php if ($headingType == "sound"): ?>
+        <div class="viewSetBtn display-mode">
+            <strong>Display Mode</strong>
+            <div class="btn-group">
+                <a href="<?= $listUrl ?>" id="list_view" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-th-list"></span> List
+                </a>
+                <a href="<?= $gridUrl ?>" id="grid_view" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-th"></span> Grid
+                </a>
+            </div>
+        </div>
+        <?php endif ?>
+
+        <?php if (isset($showMode) && $showMode == "l"): ?>
+        <div class="viewSetBtn item-per-page">
+            <strong>Item Per Page:
+                <a href="/<?= $aUrl ?>/<?= $boardId ?>/0/12" class="btn btn-default btn-sm">
+                    12
+                </a>
+                <a href="/<?= $aUrl ?>/<?= $boardId ?>/0/20" class="btn btn-default btn-sm">
+                    20
+                </a>
+                <a href="/<?= $aUrl ?>/<?= $boardId ?>/0/50" class="btn btn-default btn-sm">
+                    50
+                </a>
+                <a href="/<?= $aUrl ?>/<?= $boardId ?>/0/99" class="btn btn-default btn-sm">
+                    99
+                </a>
+            </strong>
+        </div>
+        <?php endif ?>
+
+        <?php if ($isOwner == 1): ?>
+        <div class="viewSetBtn add-btn">
+            <strong>Add <?= $headingType ?></strong>
+            <div class="btn-group">
+                <a id="add_<?= $headingType ?>" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </div>
+        </div>
+        <?php endif ?>
+
+    </div>
+<?php else: ?>
+    <!-- heading area -->
+    <section id="heading-section" class="jumbotron text-center">
+        <div class="container">
+            <h1 id="heading-title" class="jumbotron-heading supreme_font">dopeAF</h1>
+            <p>
+                <a href="/" class="btn btn-danger">View Our Main Page!</a>
+            </p>
+        </div>
+    </section>
+<?php endif ?>

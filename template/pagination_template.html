@@ -1,0 +1,50 @@
+<div id="pagination-bar" style="display: table; margin: 0 auto;">
+<ul class="pagination pagination-lg">
+<?php if ($pageNum != 0): ?>
+<li class="page-item">
+<?php if (($direct) == "vg"): ?>
+<a class="page-link" href="/<?= $direct ?>/<?= $boardId ?>/<?= $pageNum - 1 ?>" aria-label="Previous">
+<?php endif ?>
+<?php if (($direct) == "dl" || ($direct) == "nl"): ?>
+<a class="page-link" href="/<?= $direct ?>/<?= $boardId ?>/<?= $pageNum - 1 ?>/<?= $pageMax ?>" aria-label="Previous">
+<?php endif ?>
+<?php if (($direct) == "mp" || ($direct) == "cg" || ($direct) == "eg"): ?>
+<a class="page-link" href="/<?= $direct ?>/<?= $pageNum - 1 ?>" aria-label="Previous">
+<?php endif ?>
+<span aria-hidden="true">&laquo;</span>
+<span class="sr-only">Previous</span>
+</a>
+</li>
+<?php endif ?>
+<?php
+for ($index = 0; $index < $totalNum / $pageMax ; $index++) {
+	if ($direct == "vg") {
+		echo "<li class=\"page-item\"><a class=\"page-link\" href=\"/$direct/$boardId/$index\">$index</a></li>";
+	}
+
+	if (($direct) == "dl" || ($direct) == "nl") {
+		echo "<li class=\"page-item\"><a class=\"page-link\" href=\"/$direct/$boardId/$index/$pageMax\">$index</a></li>";
+	}
+	if (($direct) == "mp" || ($direct) == "cg" || ($direct) == "eg") {
+		echo "<li class=\"page-item\"><a class=\"page-link\" href=\"/$direct/$index\">$index</a></li>";
+	}
+}
+?>
+<?php if ( $pageMax * ($pageNum + 1) < $totalNum): ?>
+<li class="page-item">
+<?php if (($direct) == "vg"): ?>
+<a class="page-link" href="/<?= $direct ?>/<?= $boardId ?>/<?= $pageNum + 1 ?>" aria-label="Previous">
+<?php endif ?>
+<?php if (($direct) == "dl" || ($direct) == "nl"): ?>
+<a class="page-link" href="/<?= $direct ?>/<?= $boardId ?>/<?= $pageNum + 1 ?>/<?= $pageMax ?>" aria-label="Previous">
+<?php endif ?>
+<?php if (($direct) == "mp" || ($direct) == "cg" || ($direct) == "eg"): ?>
+<a class="page-link" href="/<?= $direct ?>/<?= $pageNum + 1 ?>" aria-label="Previous">
+<?php endif ?>
+<span aria-hidden="true">&raquo;</span>
+<span class="sr-only">Next</span>
+</a>
+</li>
+<?php endif ?>
+</ul>
+</div>

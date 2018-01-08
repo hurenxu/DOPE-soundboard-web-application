@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <form style="margin: 0 35%" enctype="multipart/form-data" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
+        <div class="form-group">
+            <label>Sound board name
+                <input type="text" name="boardTitle" required value="<?= $boardTitle ?>" >
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Select a new image If you want to change it
+                <input type="file" name="upload[]" accept=".png, .jpeg" value="../<?= $boardCover ?>">
+                <img src="../<?= $boardCover ?>">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>mode
+                <select name="isPublic">
+                    <?php if ($isPublic): ?>
+                        <option value="1" selected>public</option>
+                        <option value="0">private</option>
+                    <?php else: ?>
+                        <option value="1">public</option>
+                        <option value="0" selected>private</option>
+                    <?php endif ?>
+                </select>
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

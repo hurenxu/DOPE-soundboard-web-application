@@ -1,0 +1,128 @@
+<!--
+We use /etc/apache2/conf-available/security.conf to obscure server identity.
+We set "ServerTokens" to "Prod" and "ServerSignature" to "off".
+After adding those, our server request will only display Server's name.
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dopeAF&reg;</title>
+    <link href="/css/theme.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        function showContent(id)
+        {
+            var icon = document.getElementById('cover_'+id);
+            var content = document.getElementById(id);
+            icon.style.display = 'none';
+            content.style.display = 'block'
+        }
+        function hideContent(id)
+        {
+            var icon = document.getElementById('cover_'+id);
+            var content = document.getElementById(id);
+            icon.style.display = 'block';
+            content.style.display = 'none'
+        }
+    </script>
+</head>
+<body>
+<!-- Main Container -->
+<div class="container">
+    <!-- Navigation -->
+    <header> <a href="index.html">
+        <img src="img/dopeAF-logo.png" alt="dopeAF">
+    </a>
+    </header>
+    <!-- Mainview Section -->
+    <section class="mainview" id="mainview">
+        <h2 class="mainview_header">dope<span class="light">AF</span></h2>
+        <p class="tagline">Welcome to our team page!</p>
+    </section>
+    <!-- Homework Section -->
+    <section>
+        <div class="homework">
+            <div class="list" id="one">
+                <h1 class="number">HW1</h1>
+                <h4>Server Configuration</h4>
+                <div class="hw1" id="hw1" hidden="hidden" onmouseleave="hideContent('hw1')">
+                    <ul>
+                        <li>Part 1: <span><a href="index.html" target="_blank">Team Site</a></span></li>
+                    </ul>
+                </div>
+                <div class="cover" id="cover_hw1" onmousemove="showContent('hw1');">
+                    <p>Move Mouse Over Here</p>
+                    <img src="img/icon.png" alt="Links">
+                </div>
+            </div>
+
+            <div class="list" id="two">
+                <h1 class="number">HW2</h1>
+                <h4> Server-Side Programming Explorations</h4>
+                <p>Under Construction</p>
+                <img src="img/icon.png" alt="Unlocking Soon">
+            </div>
+
+            <div class="list" id="three">
+                <h1 class="number">HW3</h1>
+                <h4>SoundBoard CRUD Part 1</h4>
+                <div class="hw1" id="hw3" hidden="hidden" onmouseleave="hideContent('hw3')">
+                    <ul>
+                        <li>Part 1: <span><a href="/mp/0" target="_blank">Sound board</a></span></li>
+                    </ul>
+                </div>
+                <div class="cover" id="cover_hw3" onmousemove="showContent('hw3');">
+                    <p>Move Mouse Over Here</p>
+                    <img src="img/icon.png" alt="Links">
+                </div>
+            </div>
+
+            <div class="list" id="four">
+                <h1 class="number">HW4</h1>
+                <h4>SoundBoard CRUD Part 2</h4>
+                <div class="hw1" id="hw4" hidden="hidden" onmouseleave="hideContent('hw4')">
+                    <ul>
+                        <li>Part 1: <span><a href="/mp/0" target="_blank">Sound board</a></span></li>
+                    </ul>
+                </div>
+                <div class="cover" id="cover_hw4" onmousemove="showContent('hw4');">
+                    <p>Move Mouse Over Here</p>
+                    <img src="img/icon.png" alt="Links">
+                </div>            </div>
+        </div>
+    </section>
+    <!-- Info Section -->
+    <section class="banner">
+        <h2 class="info fadeLeft animation">Course Information</h2>
+        <div class="description fadeLeft animation delay">
+            <p>CSE 135. Server Client Languages</p>
+            <p>Instructor: Prof. Thomas A. Powell <img src="./img/tpow.png" alt="picture of professor" style="display:inline; height: 30px;">
+            </p>
+        </div>
+    </section>
+    <!-- More Info Section -->
+    <footer>
+        <article class="footer_column">
+            <h3>Lihao He</h3>
+            <img src="img/hlh.JPG" alt="hlh">
+            <h4><a href="mailto:lih046@ucsd.edu">lih046@ucsd.edu</a></h4>
+        </article>
+        <article class="footer_column">
+            <h3>Renxu Hu</h3>
+            <img src="img/hrx.JPG" alt="hrx">
+            <h4><a href="mailto:reh011@ucsd.edu">reh011@ucsd.edu</a></h4>
+        </article>
+        <article class="footer_column">
+            <h3>Linhao Yu</h3>
+            <img src="img/ylh.png" alt="hrx">
+            <h4><a href="mailto:liy063@ucsd.edu">liy063@ucsd.edu</a></h4>
+        </article>
+    </footer>
+    <!-- Copyrights Section -->
+    <div class="copyright">&copy;2017 - dopeAF</div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>

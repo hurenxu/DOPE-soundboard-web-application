@@ -1,0 +1,14 @@
+
+<tr>
+    <th><?= $index ?></th>
+    <th><img src="/<?= $imgPath ?>" style="height: 70px; width: 70px"></th>
+    <th><?= $soundName ?></th>
+    <th>
+        <button class="btn btn-primary list-play-button">Play</button>
+        <audio class="list-audio" id="mSound" src="/<?= $soundPath ?>"></audio>
+        <?php if ($isOwner == 1): ?>
+            <a><button url="<?= $modifyUrl ?>" class="btn btn-primary listSoundModifyBtn">Modify</button></a>
+            <a><button url="<?= $deleteUrl ?>" class="btn btn-primary deleteBtn">Delete</button></a>
+        <?php endif ?>
+    </th>
+</tr>

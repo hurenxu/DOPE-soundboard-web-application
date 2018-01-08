@@ -1,0 +1,16 @@
+<div class="modal fade" id="alterModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="alert <?= $alterType ?>" role="alert">
+            <?= $message ?>
+        </div>
+    </div>
+</div>
+
+<script>
+    var myModal = $('#alterModal');
+    myModal.modal('show');
+    clearTimeout(myModal.data('hideInterval'));
+    myModal.data('hideInterval', setTimeout(function(){
+        myModal.modal('hide');
+    }, 2000));
+</script>

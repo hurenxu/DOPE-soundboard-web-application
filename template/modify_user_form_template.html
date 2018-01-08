@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <form style="margin: 0 35%" enctype="multipart/form-data" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
+       <div class="form-group">
+            <label>email
+                <input type="text" name="email" required value="<?= $email ?>" >
+            </label>
+        </div>
+        <div class="form-group">
+            <label>is admin
+                <select name="isadmin">
+		     <?php if($isadmin == 1): ?>
+                        <option value="1" selected>yes</option>
+                        <option value="0">no</option>
+		     <?php else: ?>
+                        <option value="1">yes</option>
+                        <option value="0" selected>no</option>
+		     <?php endif ?>
+                </select>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>first name
+                <input type="text" name="firstname" required value="<?= $firstname ?>" >
+            </label>
+        </div>
+        <div class="form-group">
+            <label>last name
+                <input type="text" name="lastname" required value="<?= $lastname ?>" >
+            </label>
+        </div>
+        <div class="form-group">
+            <label>login id
+                <input type="text" name="loginid" required value="<?= $loginid ?>" >
+            </label>
+        </div>
+        <div class="form-group">
+            <label>password
+                <input type="password" name="password" required value="<?= $password ?>" >
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
